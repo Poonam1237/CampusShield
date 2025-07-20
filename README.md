@@ -60,10 +60,12 @@ CampusShield is a secure, anonymous reporting platform built to empower students
 
 ![Suggestion Page](CampusShield/CampusShieldProject/Screenshots/suggestion.png)
 
-
-
 ---
-
+### 🔐 Admin Credentials (for Testing Only)
+- URL: http://127.0.0.1:8000/admin/
+- Username: admin
+- Password: 12345678
+---
 ## 🧪 How to Run Locally
 
 1. **Clone this repo:**
