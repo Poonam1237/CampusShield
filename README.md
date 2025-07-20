@@ -27,7 +27,38 @@ CampusShield is a secure, anonymous reporting platform built to empower students
 
 ---
 
+
 ## 📸 Screenshots
+
+### 🔹 Homepage (Scrolling View)
+
+![Home Page 1](CampusShield/CampusShieldProject/Screenshots/home1.png)
+![Home Page 2](CampusShield/CampusShieldProject/Screenshots/home2.png)
+![Home Page 3](CampusShield/CampusShieldProject/Screenshots/home3.png)
+
+---
+
+### 🔹 About CampusShield
+
+![About Page](CampusShield/CampusShieldProject/Screenshots/about.png)
+
+---
+
+### 🔹 Submit Report Page
+
+![Submit Report](CampusShield/CampusShieldProject/Screenshots/submit.png)
+
+---
+
+### 🔹 Track Report Page
+
+![Track Report](CampusShield/CampusShieldProject/Screenshots/track.png)
+
+---
+
+### 🔹 Suggestion Page
+
+![Suggestion Page](CampusShield/CampusShieldProject/Screenshots/suggestion.png)
 
 
 
