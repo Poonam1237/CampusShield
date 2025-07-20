@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Members</title>
+    <link rel="stylesheet" href="{% static 'FacultySupport.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+    <style>
+    
+    .t1
+    {
+        font-size: 45px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        color: rgb(59, 85, 129);
+    }
+
+    .t2
+    {
+        font-size: 30px;
+        color: rgb(79, 128, 251);
+        font-family: 'Tiktok Sans';
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        font-weight: bolder;
+
+    }
+
+    .t3
+    {
+        color: rgb(80, 104, 163);
+
+    }
+
+    .top
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left: 1330px;
+        border-radius: 15px;
+        border: 0;
+        background-color:rgb(133, 154, 209);
+
+        height: 35px;
+        width:100px;
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Poppins';
+
+    }
+
+    .top:hover{
+        background-color:rgb(58, 85, 153);
+        color:white;
+    }
+
+    html {
+    scroll-behavior: smooth;
+    }
+    
+    
+.move
+{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+
+.move.m1
+{
+    opacity: 1;
+    transform: translateX(0px);
+
+}
+
+
+.back
+{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-out;
+}
+
+.back.b1
+{
+    opacity: 1;
+    transform: translateX(0px);
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a id="top1"></a>
+        <div class="container1">
+        <div class="heading1">Meet Our Faculty</div>
+        <div class="heading2">Our dedicated faculty brings expertise, guidance, and support to help students thrive academically and personally.</div>
+        <div class="heading3">"Trusted faculty representative committed to student safety and support."</div>
+        </div>
+        <div class="container2">
+            
+            <div class="card1 move">
+                <div class="details">
+                    <div class="t1">Dr. Meena Sharma</div>
+                    <div class="t">Associate Professor</div>
+                    <div class="t">Electronics and Communication</div>
+                    <div class="t">meera.sharma@college.edu</div>
+                    <div class="t">9009000990</div>
+                    <div class="t2">Discrimination</div>
+                </div>
+                <div class="C1">
+                    <img class='image' src="{% static 'faculty_images/img2.jpeg' %}" alt="img">
+                    
+                </div>
+            </div>
+
+
+            <div class="card2 back">
+                <div class="C1">
+                    <img class='image' src="{% static 'faculty_images/img6.jpeg' %}" alt="img">
+
+                </div>
+                <div class="details">
+                    <div class="t1">Dr. Saurabh Jain </div>
+                    <div class="t">HOD</div>
+                    <div class="t">Psychology</div>
+                    <div class="t">saurabh.jain@college.edu</div>
+                    <div class="t">9000000004</div>
+                    <div class="t2 t3">Mental Health</div>
+                </div>
+                
+            </div>
+            
+
+            <div class="card1 move">
+                <div class="details">
+                    <div class="t1">Dr. Poonam </div>
+                    <div class="t">Assistant Professor</div>
+                    <div class="t">Computer Science</div>
+                    <div class="t">poonam@college.edu </div>
+                    <div class="t">9000000007</div>
+                    <div class="t2">Academic Misconduct</div>
+                </div>
+                <div class="C1">
+                    <img class='image' src="{% static 'faculty_images/img5.jpeg' %}" alt="img">
+                    
+                </div>
+            </div>
+
+
+            <div class="card2 back">
+                <div class="C1">
+                    <img class='image' src="{% static 'faculty_images/img1.jpeg' %}" alt="img">
+
+                </div>
+                <div class="details">
+                    <div class="t1">Mr. Ankit Verma</div>
+                    <div class="t">Faculty Coordinator</div>
+                    <div class="t">Mechanical Engineering</div>
+                    <div class="t">ankit.verma@college.edu</div>
+                    <div class="t">9000000002 </div>
+                    <div class="t2 t3">Ragging</div>
+                </div>
+                
+            </div>
+
+
+
+            <div class="card1 move">
+                <div class="details">
+                    <div class="t1">Ms. Riya Thomas </div>
+                    <div class="t">Faculty Coordinator</div>
+                    <div class="t">Civil Engineering</div>
+                    <div class="t">riya.thomas@college.edu</div>
+                    <div class="t">9000000003</div>
+                    <div class="t2">Harassment</div>
+                </div>
+                <div class="C1">
+                    <img class='image' src="{% static 'faculty_images/img3.jpeg' %}" alt="img">
+
+                </div>
+            </div>
+
+
+            <div class="card2 back">
+                <div class="C1">
+                    <img class='image' src="{% static 'faculty_images/img4.jpeg' %}" alt="img">
+                </div>
+                <div class="details">
+                    <div class="t1">Dr.Ajay Kumar</div>
+                    <div class="t">Associate Professor</div>
+                    <div class="t">Management</div>
+                    <div class="t">ajay.deshmukh@college.edu</div>
+                    <div class="t">9000000008</div>
+                    <div class="t2 t3">Other</div>
+                </div>
+                
+            </div>
+
+            <div >
+                <a href='#top1' class="top">Back to top</a>
+            </div>
+            <div class="footer">
+              <p>&copy; 2025 CampusShield - Empowering Students with Privacy, Safety, and a Voice.</p>
+            <p style="color: gray;">*This is demo data for display purposes only.*</p>
+            </div>
+
+
+
+           
+        </div>
+    </div>
+
+    <script src="{% static 'home.js' %}"></script>
+</body>
+</html>

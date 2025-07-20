@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | CampusShield</title>
+    <link rel="stylesheet" href="{% static 'About.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+    <style>
+    .fade{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+    }
+
+.fade.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.move
+{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+
+.move.m1
+{
+    opacity: 1;
+    transform: translateX(0px);
+
+}
+
+
+.back
+{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-out;
+}
+
+.back.b1
+{
+    opacity: 1;
+    transform: translateX(0px);
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1"> 
+        <div class="C1">
+        <div class="heading1"><img class='i1' src="{% static 'images/logo.png' %}"  alt="img"> About CampusShield</div>
+        <div class="heading2"><strong id="tx1">CampusShield - Anonymous Reporting Tool</strong> is a student-focused platform created to empower individuals to speak up without fear. Many hesitate to report issues such as harassment, bullying, or ragging due to fear of retaliation or lack of support.
+        <div><strong id="tx2">CampusShield bridges this gap.</strong></div>
+        
+        </div>
+        </div>
+    </div>
+
+        <div class="container2">
+            <div class="t1">Why CampusShield?</div>
+            <div class="t2 fade">Students often suffer in silence because they are afraid or unsure where to report concerns. This tool allows them to submit complaints anonymously while ensuring the reports are directed to the appropriate campus authorities.Many students hesitate to report incidents such as harassment, bullying, or misconduct due to fear of retaliation, lack of anonymity, or uncertainty about where to turn. CampusShield offers a confidential and anonymous platform where students can safely voice their concerns. By ensuring reports reach the appropriate authorities while protecting student identity, CampusShield encourages a more transparent and accountable campus environment.</div>
+        </div>
+        
+
+        <div class="container3">
+            <div class="t3 move">Our Mission</div>
+            <div class="t4 back">To foster a safe, inclusive, and responsive college environment where student voices are heard, concerns are addressed responsibly, and anonymity is respected .CampusShield is more than just a reporting platform — it represents a commitment to fostering a safer, more inclusive campus environment. Our mission is to empower students to speak up without fear by providing a secure, anonymous space to report sensitive issues. We aim to create a culture of openness and trust where every concern is taken seriously and addressed by the right authorities. By promoting emotional safety, encouraging transparency, and ensuring timely follow-ups, CampusShield supports the mental well-being of students and strengthens the overall responsiveness of institutions.</div>
+        </div>
+
+
+        <div class="container4">
+            <div class="t5 fade">About the Developer</div>
+            <div class="t6 fade">This project was developed by <strong>POONAM</strong>  as an initiative to address campus safety issues.</div>
+            <div class="t6 fade">
+                Email id: 
+                <a href="mailto:poonamkumarijoura7@gmail.com">
+                 <img class="i2" src="{% static 'images/mail.png' %}" alt="img"> poonamkumarijoura7@gmail.com
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+              <p>&copy; 2025 CampusShield - Empowering Students with Privacy, Safety, and a Voice.</p>
+
+        </div>
+    </div>
+    <script src="{% static 'home.js' %}"></script>
+</body>
+</html>

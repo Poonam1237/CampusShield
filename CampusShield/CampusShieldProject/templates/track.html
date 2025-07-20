@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Report</title>
+    <link rel="stylesheet" href="{% static 'track.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+    <style>
+        .C3,.text1
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text1
+        {
+            font-size: 30px;
+            font-family: 'Tiktok Sans';
+            font-weight: bold;
+            color: rgba(10, 10, 10, 0.727);
+    
+        }
+
+        .btn1
+        {
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: 0;
+            background-color: #92b5eb;
+            font-size: 20px;
+            font-family: 'Tiktok Sans';
+            font-weight: 500;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .btn1:hover
+        {
+            background-color: rgb(107, 158, 209);
+        }
+        .btn{margin-bottom: 50px; }
+        #r1{ color: rgb(246, 39, 39);}
+        #r2{ color: rgb(39, 246, 81);}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="h1">Track Your Report</div>
+        <div class="C1">
+            <form method="POST">
+            {% csrf_token %}
+            <label class="l1">Enter Report ID:</label>
+            <input class="i1" type="text" name="rid" required>
+            <div class="C2">
+            <button class='btn' type="submit">Track</button>
+            </div>
+            </form>
+        </div>
+    </div>
+   
+    {% if rpid %}
+
+    <div class="container2">
+        <div class="h2">Report Details</div>
+        <div class="C3">
+        <div class="text1">Category : {{rpid.category}}</div>
+        <div class="text1">Description : {{rpid.description}}</div>
+
+        {% if rpid.isresolved == True %}
+        <div class="text1">Report Status : <span id="r2">Resolved</span> </div>
+        {% else %}
+        <div class="text1">Report Status : <span id="r1">Pending</span> </div>
+        {% endif %}
+
+        <div class="text1">Reported At : {{rpid.time}}</div>
+        </div>
+    </div>
+
+    {% elif error %}
+     <div class="container3">
+        <div class="C4">Report Status : </div>
+        <div class="C5">Not Found</div>
+    </div>
+    
+    {% endif %}
+
+
+    <a class='btn1' href="{% url 'home' %}">Back to Homepage</a>
+
+
+</body>
+</html>

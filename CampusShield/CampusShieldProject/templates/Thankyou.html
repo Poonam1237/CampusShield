@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thank You</title>
+  <link rel="stylesheet" href="{% static 'Thankyou.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+</head>
+<body>
+  <div class="container">
+    <h2>✅ Thank you for submitting your report!</h2>
+    <p>We'll look into it while keeping your identity protected.</p>
+
+    <p class="rid">ID: {{id}}</p>
+    <form action="{% url 'home' %}">
+      <button type="submit" class="btn">Go To Homepage</button>
+    </form>
+
+    
+  </div>
+</body>
+</html>

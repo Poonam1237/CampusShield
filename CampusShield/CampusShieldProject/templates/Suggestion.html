@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestion submit</title>
+    <link rel="stylesheet" href="{% static 'Suggestion.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h2> Thank you for your Suggestion !</h2>
+    <p>We'll look into it while keeping your identity protected.</p>
+    <p>Every suggestion brings us closer to a better environment.</p>
+    <p>We appreciate your input — it makes a real difference.</p>
+
+    <a href="{% url 'home' %}" class='btn'>Go To Homepage</a>
+  </div>
+</body>
+</html>

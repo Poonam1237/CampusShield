@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Report</title>
+  <link rel="stylesheet" href="{% static 'submit.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+  <style>
+    .container{width: 800px;
+    height:600px;}
+
+    .textarea{
+    height: 180px;
+    resize: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="t1">Submit Your Report Anonymously</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <div class='C1'>
+        <label for="category" class="l1">Select Category</label>
+        <select class="S1" name="category" required>
+          <option value="Ragging">Ragging</option>
+          <option value="Harassment">Harassment</option>
+          <option value="Mental Health">Mental Health</option>
+          <option value="Discrimination">Discrimination</option>
+          <option value="Academic Misconduct">Academic Misconduct</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="C2">
+        <label for="description" class="l2">Your Concern</label>
+        <textarea class="textarea" name="description" rows="5" placeholder="Describe the issue..." required></textarea>
+      </div>
+        <div class="btn1">
+        <button type="submit" class="btn">Submit Report</button>
+        </div>
+    </form>
+  </div>
+</body>
+</html>
+

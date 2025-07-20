@@ -1,0 +1,153 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusShield - Anonymous Reporting Tool</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <style>
+        a
+        {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        textarea
+        {
+            resize: none;
+        }
+
+
+        .heading
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="heading">
+                <a href="{% url 'about' %}">
+                <img class='im1' src="{% static 'images/logo.png'%}" alt="img">
+
+                Campus Shield
+                </a>
+            </div>
+            <div class="content">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'submit' %}">Submit</a></li>
+                    <li><a href="{% url 'track' %}">Track</a></li>
+                    <li><a href="{% url 'faculty' %}">Support</a></li>
+                    <li><a href="/admin/">Admin</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="t1">Your Voice , Our Concern</div>
+            <div class="t2">Report our Concerns, Anonymously</div>
+            <div class="t3">Speak up about ragging, harassment, or any campus issue without revealing your identity.</div>
+            <a href="{% url 'submit' %}" class="btn1">Submit Report</a>
+           
+        </div>
+
+        <div class="box2">
+            <div class="heading2">
+                <div class="t4">What Can You Report?</div>
+                <div class="t5">Choose the category that best fits your concern</div>
+            </div>
+            
+            <div class="C1 fade">
+                    <div class="card">
+                    <div class="text1">🎓 Ragging</div>
+                    <div class="text2">Report any instance of bullying or hazing on campus.</div>
+                </div>
+                <div class="card">
+                    <div class="text1">⚖️ Discrimination</div>
+                    <div class="text2">Report unfair treatment based on gender, caste, or religion.</div>
+                </div>
+                <div class="card">
+                    <div class="text1">🧠 Mental Health</div>
+                    <div class="text2">Seek help or flag emotional distress incidents anonymously.</div>
+                </div>
+            </div>
+            
+            <div class="C1 fade1">
+                <div class="card">
+                    <div class="text1">🚫 Harassment</div>
+                    <div class="text2">Raise concerns about physical, verbal, or online harassment.</div>
+                </div>
+                <div class="card">
+                    <div class="text1">💼 Academic Misconduct</div>
+                    <div class="text2">Flag cheating, favoritism, or abuse of power in academics.</div>
+                </div>
+                <div class="card">
+                    <div class="text1">📦 Other</div>
+                    <div class="text2">Any other safety or wellbeing concern you want to report.</div>
+                </div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="heading3">
+            <div class="text3">Key Features</div>
+            <div class="text4">Our platform ensures safety, privacy, and effective issue resolution</div>
+            </div>
+
+            <div class="card2 move">
+                <div class="ht1">📈 Escalation Tracking</div>
+                <div class="ht2">Track your report status and see when it's viewed, assigned, and resolved (without exposing identity).</div>
+            </div>
+            <div class="card2 back">
+                 <div class="ht1">🏛️ Campus Authority Dashboard</div>
+                <div class="ht2">Admins can view categorized reports and prioritize based on severity or type. Proper routing ensures faster resolution.</div>
+            </div>
+            <div class="card2 move">
+                 <div class="ht1">🔒 Anonymous Support</div>
+                <div class="ht2">Submit concerns without revealing your identity. We prioritize your safety and comfort.</div>
+            </div>
+            <div class="card2 back">
+                 <div class="ht1">💬 Get Real Support</div>
+                <div class="ht2">Submit a support request anonymously and get help or guidance from trained campus staff or volunteers.</div>
+            </div>
+            
+        </div>
+
+        <div class="box4">
+            <div class="heading4 ">
+            <div class="st1">Any Suggestions?</div>
+            <div class="st2">Submit anonymous suggestions or feedback to improve your campus</div>
+            </div>
+
+            <form  method="POST">
+            <input class="i1 fade" name='title' type="text" placeholder="Title">
+            <textarea class="i2 fade" name="desc" rows="5" cols="10" placeholder="Describe your suggestions or idea..."></textarea>
+            
+                {% csrf_token %}
+            <button type='submit' class="btn2 ">Submit suggestion</button>
+            </form>
+        </div>
+        <div class="footer">
+              <p>&copy; 2025 CampusShield - Empowering Students with Privacy, Safety, and a Voice.</p>
+        </div>
+    </div>
+
+    <script src="{% static 'home.js' %}"></script>
+</body>
+</html>
